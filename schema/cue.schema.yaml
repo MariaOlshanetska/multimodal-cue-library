@@ -1,0 +1,38 @@
+# Multimodal Cue Schema (v0.1)
+
+id: string            # unique identifier
+name: string          # human-readable name
+modality:             # primary modality
+  - face | gaze | gesture | prosody | posture | body
+
+parameters:
+  amplitude:           # e.g. low / medium / high or numeric
+  duration:            # ms or relative (short / medium / long)
+  timing:              # e.g. aligned-to-word, turn-final, onset+200ms
+
+intent_links:
+  - intent: string     # e.g. emphasis, turn-yielding
+    confidence:        # low / medium / high
+    notes: string
+
+context_constraints:
+  interaction_type:    # e.g. service, narrative, emergency
+  social_relation:     # e.g. symmetric, authority
+  discourse_position: # e.g. turn-initial
+  cultural_notes: string
+
+predicted_outcomes:
+  - perception: string # e.g. politeness, urgency
+    direction:         # increase / decrease
+    notes: string
+
+culture_tags:
+  baseline:            # e.g. Catalan
+  known_variants: []   # list of cultures
+  status:              # assumed / tested / speculative
+
+citations:
+  - key: string        # BibTeX key
+    note: string
+
+notes: string

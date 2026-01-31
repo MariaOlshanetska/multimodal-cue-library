@@ -1,0 +1,37 @@
+id: GEST_HEAD_NOD_01
+name: Single head nod
+modality: gesture
+
+parameters:
+  amplitude: medium
+  duration: short
+  timing: turn-final
+
+intent_links:
+  - intent: acknowledgment
+    confidence: high
+    notes: Commonly used to signal understanding or receipt.
+
+context_constraints:
+  interaction_type: service
+  social_relation: symmetric
+  discourse_position: turn-final
+  cultural_notes: Neutral in Catalan service interactions.
+
+predicted_outcomes:
+  - perception: politeness
+    direction: increase
+    notes: Especially when paired with neutral prosody.
+
+culture_tags:
+  baseline: Catalan
+  known_variants: [Spanish, Italian]
+  status: assumed
+
+citations:
+  - key: Kopp2006Gesticon
+    note: Gestural acknowledgment patterns.
+
+notes: >
+  This cue is treated as interactionally neutral and suitable
+  for service-oriented agents.
