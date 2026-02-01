@@ -1,0 +1,61 @@
+id: PROS_EXCITED_01
+name: "Excited / high activation positive"
+modality: prosody
+cue_type: package
+description: >
+  A prosodic package associated with high-activation positive stance: increased speech rate,
+  higher intensity, and elevated pitch level (often with wider pitch range). Intended to convey
+  energetic engagement and enthusiastic alignment.
+
+intent_links:
+  - intent: affiliation
+    confidence: medium
+    notes: "May convey enthusiastic alignment with interlocutor/content."
+  - intent: emphasis
+    confidence: medium
+    notes: "High activation can act as an intensifier, increasing perceived prominence."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: high
+    arousal_target: high
+
+compatibility:
+  can_cooccur_with:
+    - "FACE_EXCITED_01"
+    - "FACE_SMILE_01"
+
+parameters:
+  intensity_level: high
+  amplitude_level: high
+
+predicted_outcomes:
+  - perception: affiliation
+    direction: increase
+    notes: "Energetic prosody is expected to increase perceived engagement/warmth in casual chat."
+  - perception: urgency
+    direction: increase
+    notes: "High activation may also increase perceived urgency/intensity even with positive valence."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "High-arousal positive prosody may be weighted differently across cultures."
+
+evidence:
+  citations: []
+
+notes: ""

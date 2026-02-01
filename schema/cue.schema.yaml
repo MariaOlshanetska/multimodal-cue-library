@@ -1,38 +1,132 @@
-# Multimodal Cue Schema (v0.1)
+# cue.schema.yaml
+# Multimodal Cue Library — Cue Entry Schema (v0.1)
 
-id: string            # unique identifier
-name: string          # human-readable name
-modality:             # primary modality
-  - face | gaze | gesture | prosody | posture | body
+schema_version: "0.1"
 
-parameters:
-  amplitude:           # e.g. low / medium / high or numeric
-  duration:            # ms or relative (short / medium / long)
-  timing:              # e.g. aligned-to-word, turn-final, onset+200ms
+required_fields:
+  - id
+  - name
+  - modality
+  - cue_type
+  - description
+  - intent_links
+  - prerequisites
+  - compatibility
+  - parameters
+  - predicted_outcomes
+  - culture
+  - evidence
+  - notes
 
-intent_links:
-  - intent: string     # e.g. emphasis, turn-yielding
-    confidence:        # low / medium / high
-    notes: string
+controlled_vocabularies:
+  modality:
+    - gesture
+    - face
+    - prosody
+    - vocal_burst
 
-context_constraints:
-  interaction_type:    # e.g. service, narrative, emergency
-  social_relation:     # e.g. symmetric, authority
-  discourse_position: # e.g. turn-initial
-  cultural_notes: string
+  cue_type:
+    gesture:
+      - iconic
+      - metaphoric
+      - emblematic
+      - deictic
+      - abstract_deictic
+      - beat
+    face:
+      - expression
+      - brow_action
+      - smile
+      - eye_action
+    prosody:
+      - package
+    vocal_burst:
+      - laugh
+      - sigh
+      - hesitation
+      - snort
+      - exhalation
+      - click
 
-predicted_outcomes:
-  - perception: string # e.g. politeness, urgency
-    direction:         # increase / decrease
-    notes: string
+  confidence:
+    - low
+    - medium
+    - high
 
-culture_tags:
-  baseline:            # e.g. Catalan
-  known_variants: []   # list of cultures
-  status:              # assumed / tested / speculative
+  discretized_level:
+    - low
+    - medium
+    - high
 
-citations:
-  - key: string        # BibTeX key
-    note: string
+  culture_status:
+    - assumed
+    - tested
+    - speculative
 
-notes: string
+  risk_level:
+    - low
+    - medium
+    - high
+
+field_spec:
+  id: "Unique identifier string (stable across versions), GEST_HEAD_NOD_01"
+  name: "Short readable name"
+  modality: "One of controlled_vocabularies.modality"
+  cue_type: "One of controlled_vocabularies.cue_type[modality]"
+  description: "One paragraph plain description of the cue"
+
+  intent_links:
+    - intent: "string (controlled list recommended)"
+      confidence: "low|medium|high"
+      notes: "why this mapping is hypothesized / citations"
+
+  prerequisites:
+    interaction_context:
+      domain: "e.g., casual_chat (current scope); extend later"
+      task_involved: "boolean" #Future Work
+      emergency_context: "boolean" #Future Work
+      social_asymmetry: "boolean" #Future Work
+    discourse:
+      position: "turn-initial|turn-medial|turn-final|standalone|any"
+      adjacency_role: "initiation|response|feedback|any"
+      rheme_required: "boolean"
+      image_schema_required: "na/container/cycle/force/object/path/whole"
+    physical:
+      constraints_status: "not_modeled"   #Future Work
+
+    affective:
+      valence_target: "low|medium|high|any"
+      arousal_target: "low|medium|high|any"
+
+  timing:
+    anchor: "rheme|keyword|phrase|turn_boundary|free"
+    duration_level: "low|medium|high or numeric ms" #Future Work
+    temporal_profile: "onset|apex|offset" #Future Work
+
+  compatibility:
+    can_cooccur_with: ["list of cue ids or cue types"]
+
+  parameters:
+    # modality-specific
+    substitution: #for gestures and bursts
+      can_substitute_utterance: "boolean"
+      substitution_notes: "string"
+    intensity_level: "low|medium|high|any"
+    amplitude_level: "low|medium|high|any"
+
+  predicted_outcomes:
+    - perception: "politeness|urgency|credibility|affiliation|dominance|uncertainty"
+      direction: "increase|decrease"
+      notes: "short explanation / assumptions"
+
+  culture:
+    baseline: "Catalan"
+    known_variants: ["optional list of cultures/languages/communities"]
+    status: "assumed|tested|speculative"
+    notes: "cultural display/decoding notes if relevant"
+
+  evidence:
+    citations: ["DOI"]
+
+  notes: "free text"
+

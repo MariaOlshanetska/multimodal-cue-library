@@ -1,0 +1,53 @@
+id: FACE_SAD_01
+name: "Sad expression"
+modality: face
+cue_type: expression
+description: >
+  Facial configuration associated with sadness (e.g., lowered mouth corners, softened gaze).
+  Included as an affective cue for exploratory purposes in casual-chat scope.
+
+intent_links:
+  - intent: mitigation
+    confidence: medium
+    notes: "May soften stance or convey sympathy/concern depending on context."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: low
+    arousal_target: low
+
+compatibility:
+  can_cooccur_with:
+    - "prosody:package:any"
+
+parameters:
+  intensity_level: medium
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: affiliation
+    direction: increase
+    notes: "May increase perceived empathy/concern (treated here under affiliation)."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Affective interpretations are context-sensitive; validate before use in service agents."
+
+evidence:
+  citations: []
+
+notes: ""

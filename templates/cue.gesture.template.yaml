@@ -1,0 +1,57 @@
+id: GEST___TBD___01
+name: "TBD gesture name"
+modality: gesture
+cue_type: deictic  # iconic|metaphoric|emblematic|deictic|abstract_deictic|beat
+description: >
+  One-paragraph description of the gesture form and its typical usage.
+
+intent_links:
+  - intent: "TBD (emphasis / reference / affiliation)"
+    confidence: medium
+    notes: "Why this mapping is hypothesized; add citations if available."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any                 # turn-initial|turn-medial|turn-final|standalone|any
+    adjacency_role: any           # initiation|response|feedback|any
+    rheme_required: false
+    image_schema_required: na     # na|container|cycle|force|object|path|whole
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any           # low|medium|high|any
+    arousal_target: any           # low|medium|high|any
+
+compatibility:
+  can_cooccur_with: ["FACE___TBD___01", "PROS_PACK___TBD___01"]  # ids or cue types
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: >
+      If true, the gesture can replace (part of) the verbal string (e.g., pointing instead of
+      saying "that direction"). Use conservatively and only where interpretation remains clear.
+  intensity_level: any            # low|medium|high|any
+  amplitude_level: medium         # low|medium|high|any
+
+predicted_outcomes:
+  - perception: credibility        # politeness|urgency|credibility|affiliation|dominance|uncertainty
+    direction: increase            # increase|decrease
+    notes: "Short explanation of the expected effect."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed                 # assumed|tested|speculative
+  notes: ""
+
+evidence:
+  citations: []                   # list of DOI strings
+
+notes: ""
+

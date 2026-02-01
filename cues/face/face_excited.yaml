@@ -1,0 +1,57 @@
+id: FACE_EXCITED_01
+name: "Excited expression"
+modality: face
+cue_type: expression
+description: >
+  Facial display associated with high arousal positive affect (e.g., widened eyes, animated mouth
+  movement). Treated as a high-energy positive stance marker.
+
+intent_links:
+  - intent: emphasis
+    confidence: medium
+    notes: "May function as an affective intensifier for positive evaluations."
+  - intent: affiliation
+    confidence: medium
+    notes: "Can convey enthusiastic alignment in casual interaction."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: high
+    arousal_target: high
+
+compatibility:
+  can_cooccur_with:
+    - "prosody:package:any"
+    - "gesture:beat"
+
+parameters:
+  intensity_level: high
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: urgency
+    direction: increase
+    notes: "High arousal may increase perceived intensity/activation (even if valence is positive)."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "High-arousal displays may be interpreted differently cross-culturally; validate carefully."
+
+evidence:
+  citations: []
+
+notes: ""

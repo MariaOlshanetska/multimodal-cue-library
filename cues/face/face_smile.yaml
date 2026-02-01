@@ -1,0 +1,58 @@
+id: FACE_SMILE_01
+name: "Smile"
+modality: face
+cue_type: smile
+description: >
+  A brief smile (closed- or slightly open-mouth), used as an affiliative cue or as a softener.
+  Kept separate from a broader ``happy'' expression for finer selection.
+
+intent_links:
+  - intent: affiliation
+    confidence: high
+    notes: "Common affiliative marker; can also serve mitigation/softening depending on context."
+  - intent: mitigation
+    confidence: medium
+    notes: "May reduce perceived bluntness when paired with requests or dispreferred responses."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: high
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - "face:expression:any"
+    - "prosody:package:any"
+    - "gesture:beat"
+
+parameters:
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: politeness
+    direction: increase
+    notes: "May increase perceived friendliness/softening (treated here under politeness)."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

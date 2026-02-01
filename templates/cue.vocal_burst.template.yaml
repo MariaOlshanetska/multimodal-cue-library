@@ -1,0 +1,57 @@
+id: VB___TBD___01
+name: "TBD vocal burst name"
+modality: vocal_burst
+cue_type: hesitation  # laugh|sigh|hesitation|snort|exhalation|click
+description: >
+  One-paragraph description of the vocal burst (non-lexical vocalization) and typical usage.
+
+intent_links:
+  - intent: "TBD (e.g., uncertainty / mitigation / feedback)"
+    confidence: low
+    notes: "Vocal bursts are often context-sensitive; annotate conservatively."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with: ["FACE___TBD___01", "PROS_PACK___TBD___01"]
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: >
+      Vocal bursts may substitute minimal verbal material (e.g., backchannels, hesitation markers),
+      but should not replace propositional content. Use only when interpretation remains clear.
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: uncertainty
+    direction: increase
+    notes: "Short explanation of the expected effect."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""
+

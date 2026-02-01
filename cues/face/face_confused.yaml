@@ -1,0 +1,54 @@
+id: FACE_CONFUSED_01
+name: "Confused expression"
+modality: face
+cue_type: brow_action
+description: >
+  Facial display of confusion (e.g., brow furrow, asymmetric brow raise, slight squint).
+  Used to signal trouble in understanding, mismatch, or need for clarification.
+
+intent_links:
+  - intent: repair_initiation
+    confidence: high
+    notes: "Signals comprehension trouble and invites clarification or repetition."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: response
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: medium
+
+compatibility:
+  can_cooccur_with:
+    - "vocal_burst:hesitation"
+    - "prosody:package:any"
+
+parameters:
+  intensity_level: medium
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: uncertainty
+    direction: increase
+    notes: "Expected to increase perceived uncertainty/trouble and prompt clarification."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

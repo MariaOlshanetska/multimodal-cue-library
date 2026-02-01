@@ -1,0 +1,62 @@
+id: VB_HESITATION_01
+name: "Hesitation marker (uh/um)"
+modality: vocal_burst
+cue_type: hesitation
+description: >
+  A short hesitation vocalization (e.g., 'uh', 'um') that indicates planning difficulty or
+  uncertainty. Treated as a marked signal that often accompanies disfluency.
+
+intent_links:
+  - intent: uncertainty
+    confidence: high
+    notes: "Signals planning trouble or reduced confidence; often precedes repair or reformulation."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: medium
+
+compatibility:
+  can_cooccur_with:
+    - PROS_COGNITIVE_LOAD_01
+    - FACE_LOOK_UP_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: false
+    substitution_notes: >
+      Typically functions as an insertion within speech planning rather than as a full substitute
+      for propositional content.
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: uncertainty
+    direction: increase
+    notes: "Expected to increase perceived hesitation/planning difficulty."
+  - perception: credibility
+    direction: decrease
+    notes: "May reduce perceived confidence or competence in some contexts."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

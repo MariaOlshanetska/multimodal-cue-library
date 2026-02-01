@@ -1,0 +1,58 @@
+id: PROS_COGNITIVE_LOAD_01
+name: "Cognitive load / planning trouble"
+modality: prosody
+cue_type: package
+description: >
+  A prosodic package intended to convey cognitive load or online planning difficulty.
+  Typical correlates include reduced speech rate, increased pausing, and (optionally) the insertion
+  of restarts or self-repairs. In this library, the package is treated as a marked signal of
+  uncertainty/planning effort rather than as an affective stance.
+
+intent_links:
+  - intent: uncertainty
+    confidence: high
+    notes: "Signals planning difficulty or reduced confidence; often invites patience or clarification."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: medium
+
+compatibility:
+  can_cooccur_with:
+    - "FACE_LOOK_UP_01"
+    - "VB___TBD___01"
+
+parameters:
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: uncertainty
+    direction: increase
+    notes: "Lower intensity/tempo and disfluency-like cues are expected to increase perceived uncertainty."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Cross-cultural decoding of planning-trouble displays may vary; treat as hypothesis."
+
+evidence:
+  citations: []
+
+notes: >
+  ``Many restarts'' is not encoded as a separate parameter in v0.1; it can be implemented upstream
+  (text planning) via self-repair fragments or hesitation tokens when experimental design requires it.

@@ -1,0 +1,53 @@
+id: FACE_DISAPPOINTED_01
+name: "Disappointed expression"
+modality: face
+cue_type: expression
+description: >
+  Facial display associated with disappointment (downturned mouth, reduced energy, possible brow
+  tension). Included as a stance marker that can modulate interpretation of negative evaluations.
+
+intent_links:
+  - intent: stance_negative
+    confidence: medium
+    notes: "Signals negative stance while potentially remaining less confrontational than anger."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: low
+    arousal_target: medium
+
+compatibility:
+  can_cooccur_with:
+    - "prosody:package:any"
+
+parameters:
+  intensity_level: medium
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: dominance
+    direction: decrease
+    notes: "May reduce perceived assertiveness compared to harsher negative displays."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Risky for service-oriented agents; validate before deployment contexts."
+
+evidence:
+  citations: []
+
+notes: ""

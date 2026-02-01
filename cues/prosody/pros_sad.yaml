@@ -1,0 +1,60 @@
+id: PROS_SAD_01
+name: "Sad / low activation negative"
+modality: prosody
+cue_type: package
+description: >
+  A prosodic package associated with low-activation negative stance: reduced speech rate,
+  lower intensity, and lowered pitch level (often with reduced pitch range). Intended to convey
+  subdued affect and reduced activation.
+
+intent_links:
+  - intent: mitigation
+    confidence: medium
+    notes: "Can soften stance and signal subdued affect, depending on discourse context."
+  - intent: uncertainty
+    confidence: low
+    notes: "May be interpreted as reduced confidence in some contexts; treated as tentative."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: low
+    arousal_target: low
+
+compatibility:
+  can_cooccur_with:
+    - "FACE_SAD_01"
+
+parameters:
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: credibility
+    direction: decrease
+    notes: "Low energy may reduce perceived confidence/conviction in some contexts."
+  - perception: uncertainty
+    direction: increase
+    notes: "Subdued prosody can be perceived as hesitation or reduced certainty."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Affective decoding is highly context-sensitive; validate before service-agent use."
+
+evidence:
+  citations: []
+
+notes: ""

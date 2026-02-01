@@ -1,0 +1,54 @@
+id: PROS_PACK___TBD___01
+name: "TBD prosody package name"
+modality: prosody
+cue_type: package
+description: >
+  One-paragraph description of the prosodic package (a bundle of prosodic adjustments).
+
+intent_links:
+  - intent: "TBD (e.g., emphasis / uncertainty / turn management)"
+    confidence: medium
+    notes: "Describe the bundle at a high level; cite TTS docs or phonetics sources if relevant."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with: ["FACE___TBD___01", "GEST___TBD___01", "VB___TBD___01"]
+
+parameters:
+  # substitution not used for prosody packages in v0.1
+  intensity_level: medium
+  amplitude_level: any
+
+predicted_outcomes:
+  - perception: urgency
+    direction: increase
+    notes: "Short explanation of the expected effect."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: >
+  Optionally describe implementation hooks here (e.g., SSML/vendor tags), but keep details minimal in v0.1.
+

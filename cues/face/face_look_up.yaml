@@ -1,0 +1,54 @@
+id: FACE_LOOK_UP_01
+name: "Look up (thinking gaze)"
+modality: face
+cue_type: eye_action
+description: >
+  Brief upward gaze shift (``looking up'') used as a thinking/planning display.
+  Included as a lightweight visual correlate of cognitive load that can accompany disfluency-like prosody.
+
+intent_links:
+  - intent: uncertainty
+    confidence: medium
+    notes: "Often interpreted as searching for words/ideas; treated as a planning display."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: medium
+
+compatibility:
+  can_cooccur_with:
+    - "PROS_COGNITIVE_LOAD_01"
+    - "VB___TBD___01"
+
+parameters:
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: uncertainty
+    direction: increase
+    notes: "May increase perceived planning effort and reduce impressions of fluent certainty."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Gaze-based planning displays may vary in interpretation cross-culturally."
+
+evidence:
+  citations: []
+
+notes: ""

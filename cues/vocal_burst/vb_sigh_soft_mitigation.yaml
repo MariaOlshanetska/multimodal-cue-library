@@ -1,0 +1,62 @@
+id: VB_SIGH_SOFT_01
+name: "Soft sigh (mitigation)"
+modality: vocal_burst
+cue_type: sigh
+description: >
+  A soft sigh used to soften a potentially dispreferred response or to mark gentle resignation.
+  Included as a mitigation cue with moderate interpretive risk.
+
+intent_links:
+  - intent: mitigation
+    confidence: medium
+    notes: "Can reduce perceived bluntness by framing the response as considerate or reluctant."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: response
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: low
+    arousal_target: low
+
+compatibility:
+  can_cooccur_with:
+    - FACE_DISAPPOINTED_01
+    - PROS_SAD_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: false
+    substitution_notes: >
+      Typically functions as a preface or accompaniment to speech rather than substituting
+      propositional content.
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: politeness
+    direction: increase
+    notes: "May increase perceived softening of dispreferred responses."
+  - perception: uncertainty
+    direction: increase
+    notes: "Can also be interpreted as hesitation or reluctance."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Sigh interpretations can vary; validate before service-agent deployment."
+
+evidence:
+  citations: []
+
+notes: ""

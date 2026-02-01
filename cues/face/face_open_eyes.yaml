@@ -1,0 +1,54 @@
+id: FACE_OPEN_EYES_01
+name: "Open eyes / widened eyes"
+modality: face
+cue_type: eye_action
+description: >
+  Increased eye opening (widening) used as a salient visual intensifier. In the current design,
+  it can be used as a visual correlate of increased vocal effort (e.g., during hypervocalization).
+
+intent_links:
+  - intent: emphasis
+    confidence: medium
+    notes: "Functions as an intensifier that may increase salience of the marked segment."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: high
+
+compatibility:
+  can_cooccur_with:
+    - "prosody:package:any"
+    - "gesture:beat"
+
+parameters:
+  intensity_level: medium
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: urgency
+    direction: increase
+    notes: "May increase perceived intensity/importance of the utterance segment."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "To be validated cross-culturally and against alternative interpretations (e.g., surprise)."
+
+evidence:
+  citations: []
+
+notes: ""

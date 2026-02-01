@@ -1,0 +1,55 @@
+id: FACE_NODDING_01
+name: "Head nod (single)"
+modality: face
+cue_type: expression
+description: >
+  A single head nod produced during or around the utterance. Although primarily a head movement,
+  it is treated here as a face-channel cue for early library population and can be revised later.
+
+intent_links:
+  - intent: acknowledgment
+    confidence: high
+    notes: "Often used as a minimal feedback/receipt signal in casual interaction."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: feedback
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - "prosody:package:any"
+    - "face:smile"
+    - "gesture:beat"
+
+parameters:
+  intensity_level: low
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: affiliation
+    direction: increase
+    notes: "May increase perceived engagement/alignment via minimal feedback."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

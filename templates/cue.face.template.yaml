@@ -1,0 +1,53 @@
+id: FACE___TBD___01
+name: "TBD facial cue name"
+modality: face
+cue_type: smile  # expression|brow_action|smile|eye_action
+description: >
+  One-paragraph description of the facial configuration and typical timing.
+
+intent_links:
+  - intent: "TBD (e.g., affiliation / mitigation / uncertainty)"
+    confidence: medium
+    notes: "Why this mapping is hypothesized; add citations if available."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with: ["GEST___TBD___01", "PROS_PACK___TBD___01"]
+
+parameters:
+  # substitution is not used for face in v0.1 (leave it out to stay minimal/clean)
+  intensity_level: medium
+  amplitude_level: any
+
+predicted_outcomes:
+  - perception: politeness
+    direction: increase
+    notes: "Short explanation of the expected effect."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""
+

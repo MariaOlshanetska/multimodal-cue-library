@@ -1,0 +1,63 @@
+id: VB_LAUGH_SLIGHT_01
+name: "Slight laugh"
+modality: vocal_burst
+cue_type: laugh
+description: >
+  A brief, low-intensity laugh (or laugh-breath) used as a stance marker. In this library
+  it is treated as a potentially standalone response that can frame an utterance as sarcastic
+  or non-literal.
+
+intent_links:
+  - intent: answer_sarcasm
+    confidence: medium
+    notes: "Used as a pragmatic stance cue that can signal irony/sarcasm in casual chat."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: response
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: medium
+
+compatibility:
+  can_cooccur_with:
+    - PROS_HYPERVOCALIZATION_01
+    - FACE_SMILE_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: >
+      Can be used as a standalone response (substituting the verbal string) when sarcasm is
+      intended to be conveyed minimally. Use conservatively due to interpretive ambiguity.
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: politeness
+    direction: decrease
+    notes: "May be perceived as teasing or dismissive depending on context."
+  - perception: dominance
+    direction: increase
+    notes: "Can increase perceived stance strength when interpreted as sarcasm."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Sarcasm cues are culture- and context-sensitive; treat as hypothesis."
+
+evidence:
+  citations: []
+
+notes: ""

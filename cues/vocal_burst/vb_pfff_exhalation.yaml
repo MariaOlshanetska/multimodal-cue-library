@@ -1,0 +1,62 @@
+id: VB_PFFF_01
+name: "Exhalation 'pfff'"
+modality: vocal_burst
+cue_type: exhalation
+description: >
+  A salient exhalation (transcribed as 'pfff') that can express empathic stance, mild overwhelm,
+  or shared frustration. Included as an event-level cue with potentially strong pragmatic effects.
+
+intent_links:
+  - intent: show_empathy_hard
+    confidence: medium
+    notes: "May signal shared burden/acknowledgment of difficulty (context-dependent)."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: response
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: low
+    arousal_target: medium
+
+compatibility:
+  can_cooccur_with:
+    - FACE_SAD_01
+    - PROS_SAD_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: >
+      Can serve as a minimal standalone response (substituting the verbal string) when the intended
+      action is to acknowledge difficulty empathetically without propositional content.
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: affiliation
+    direction: increase
+    notes: "Can increase perceived empathy/solidarity in appropriate contexts."
+  - perception: credibility
+    direction: decrease
+    notes: "May also be perceived as dismissive if the empathic framing is not clear."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Interpretation can vary strongly with cultural norms and conversational context."
+
+evidence:
+  citations: []
+
+notes: ""

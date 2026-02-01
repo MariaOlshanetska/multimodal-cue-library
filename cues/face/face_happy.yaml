@@ -1,0 +1,54 @@
+id: FACE_HAPPY_01
+name: "Happy expression"
+modality: face
+cue_type: expression
+description: >
+  Facial configuration associated with positive affect (broader than a simple smile), used to
+  convey positive stance toward the interlocutor or content.
+
+intent_links:
+  - intent: affiliation
+    confidence: medium
+    notes: "Often supports positive alignment or encouragement in casual interaction."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: high
+    arousal_target: medium
+
+compatibility:
+  can_cooccur_with:
+    - "prosody:package:any"
+    - "gesture:beat"
+
+parameters:
+  intensity_level: medium
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: affiliation
+    direction: increase
+    notes: "May increase perceived warmth/alignment."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

@@ -1,0 +1,62 @@
+id: VB_AAAH_01
+name: "Relief / realization 'aaah'"
+modality: vocal_burst
+cue_type: sigh
+description: >
+  A brief 'aaah' realization/relief vocalization. Included as a cue that can mark resolution of
+  cognitive load (e.g., after finding the right word/solution) and signal that trouble has been resolved.
+
+intent_links:
+  - intent: cog_load_solved
+    confidence: medium
+    notes: "Signals resolution/relief after planning difficulty; can close a repair-like sequence."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: response
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: high
+    arousal_target: low
+
+compatibility:
+  can_cooccur_with:
+    - PROS_COGNITIVE_LOAD_01
+    - FACE_LOOK_UP_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: >
+      Can appear as a standalone marker of realization/relief, or precede the verbal continuation.
+      Use as substitute only when propositional content is not required.
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: uncertainty
+    direction: decrease
+    notes: "Expected to reduce perceived ongoing uncertainty by signaling resolution."
+  - perception: affiliation
+    direction: increase
+    notes: "May increase perceived transparency/humanness by displaying online planning."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Relief markers may differ in form and preferred placement cross-culturally."
+
+evidence:
+  citations: []
+
+notes: ""

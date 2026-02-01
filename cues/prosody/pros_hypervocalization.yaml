@@ -1,0 +1,57 @@
+id: PROS_HYPERVOCALIZATION_01
+name: "Hypervocalization (rheme-focused)"
+modality: prosody
+cue_type: package
+description: >
+  A prosodic package that increases vocal effort to highlight informational prominence.
+  It is intended to be anchored to the rheme and realized as slower speech rate with higher
+  intensity (and often expanded pitch range), increasing the perceptual salience of the marked segment.
+
+intent_links:
+  - intent: emphasis
+    confidence: high
+    notes: "Package designed to increase prominence of the rheme without changing propositional content."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: true
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: high
+
+compatibility:
+  can_cooccur_with:
+    - "FACE_OPEN_EYES_01"
+    - "GEST___TBD___01"
+
+parameters:
+  intensity_level: high
+  amplitude_level: high
+
+predicted_outcomes:
+  - perception: urgency
+    direction: increase
+    notes: "Increased effort and prominence may be perceived as greater importance/salience."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: >
+  Implementation can be approximated via TTS controls (e.g., SSML/vendored prosody tags) that adjust
+  rate, loudness, and pitch; exact mapping is system-dependent.
