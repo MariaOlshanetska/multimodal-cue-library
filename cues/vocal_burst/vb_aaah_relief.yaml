@@ -4,7 +4,7 @@ modality: vocal_burst
 cue_type: sigh
 description: >
   A brief 'aaah' realization/relief vocalization. Included as a cue that can mark resolution of
-  cognitive load (e.g., after finding the right word/solution) and signal that trouble has been resolved.
+  cognitive load (after finding the right word/solution) and signal that trouble has been resolved.
 
 intent_links:
   - intent: cognitive_load_resolved

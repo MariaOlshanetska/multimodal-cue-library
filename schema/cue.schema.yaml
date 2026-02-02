@@ -109,6 +109,10 @@ field_spec:
 
   compatibility:
     can_cooccur_with: ["list of cue ids or cue types"]
+    cannot_cooccur_with: ["list of cue ids or cue types"]   # NEW (optional)
+    cooccurrence_constraints:                               # NEW (optional)
+      other_valence_disallow: ["low"]                       # or other_valence_allow: ["medium","high","any"]
+
 
   parameters:
     # modality-specific

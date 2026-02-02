@@ -33,9 +33,22 @@ prerequisites:
 
 compatibility:
   can_cooccur_with:
-    - "face:expression:any"
-    - "prosody:package:any"
-    - "gesture:beat"
+    - FACE_LOOK_UP_01
+    - FACE_NODDING_01
+    - FACE_OPEN_EYES_01
+    - PROS_HYPERVOCALIZATION_01
+    - PROS_EXCITED_01
+    - GEST_EMBLEM_A_LOT_01
+    - GEST_WHOLE_ENCOMPASS_01
+
+  cannot_cooccur_with:
+    - FACE_SAD_01
+    - FACE_DISAPPOINTED_01
+    - PROS_SAD_01
+
+  cooccurrence_constraints:
+    other_valence_disallow: ["low"]
+
 
 parameters:
   intensity_level: low
