@@ -1,0 +1,60 @@
+id: GEST_FORCE_PUSH_01
+name: "Force push (palm push / resistance)"
+modality: gesture
+cue_type: metaphoric
+description: >
+  A forward palm push (or a brief resistance-like movement) depicting force, pressure,
+  or difficulty, often aligning with descriptions of constraints or effort.
+
+intent_links:
+  - intent: emphasis
+    confidence: medium
+    notes: "Can intensify perceived strength of a claim or difficulty."
+  - intent: negative_stance
+    confidence: low
+    notes: "May convey struggle or opposition depending on context."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: force
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: high
+
+compatibility:
+  can_cooccur_with:
+    - PROS_HYPERVOCALIZATION_01
+    - FACE_CONFUSED_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: false
+    substitution_notes: "Metaphoric force gestures should accompany verbal content rather than replace it."
+  intensity_level: medium
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: urgency
+    direction: increase
+    notes: "Higher-effort movements may increase perceived intensity/activation."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Interpretation may vary with cultural norms for intensity displays."
+
+evidence:
+  citations: []
+
+notes: ""

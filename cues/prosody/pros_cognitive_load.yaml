@@ -9,7 +9,7 @@ description: >
   uncertainty/planning effort rather than as an affective stance.
 
 intent_links:
-  - intent: uncertainty
+  - intent: cognitive_load
     confidence: high
     notes: "Signals planning difficulty or reduced confidence; often invites patience or clarification."
 

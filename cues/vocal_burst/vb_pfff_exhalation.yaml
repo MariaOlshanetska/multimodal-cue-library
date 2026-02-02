@@ -7,7 +7,7 @@ description: >
   or shared frustration. Included as an event-level cue with potentially strong pragmatic effects.
 
 intent_links:
-  - intent: show_empathy_hard
+  - intent: empathy_ack_difficulty
     confidence: medium
     notes: "May signal shared burden/acknowledgment of difficulty (context-dependent)."
 

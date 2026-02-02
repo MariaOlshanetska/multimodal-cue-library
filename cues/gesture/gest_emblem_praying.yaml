@@ -1,0 +1,68 @@
+id: GEST_EMBLEM_PRAYING_01
+name: "Praying hands (please/thanks)"
+modality: gesture
+cue_type: emblematic
+description: >
+  Hands pressed together in front of the chest. Used as an emblem to convey 'please',
+  'I beg you', or (in some contexts) gratitude.
+
+semantic_triggers:
+  scope: utterance        # utterance|rheme|any
+  match: any_of           # any_of|all_of
+  tags:
+    - SEM_PLEASE
+    - SEM_THANKS
+    - SEM_PRAY
+	
+
+intent_links:
+  - intent: request_please
+    confidence: medium
+    notes: "Can function as a polite request/plea marker in casual interaction."
+  - intent: gratitude
+    confidence: low
+    notes: "Can also be used to convey thanks depending on context."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: high
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - FACE_SMILE_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: "Can substitute a minimal 'please' or 'thanks' response when propositional content is not required."
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: politeness
+    direction: increase
+    notes: "Expected to increase perceived politeness/softening."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Emblem interpretation may vary cross-culturally."
+
+evidence:
+  citations: []
+
+notes: "Semantic triggers (to be added to schema): PLEASE, BEG, THANKS."

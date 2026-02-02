@@ -1,0 +1,63 @@
+id: GEST_EMBLEM_SMALL_01
+name: "Small amount emblem (pinch)"
+modality: gesture
+cue_type: emblematic
+description: >
+  Pinching gesture indicating a small amount ('a bit', 'tiny', 'just a little').
+
+semantic_triggers:
+  scope: utterance        # utterance|rheme|any
+  match: any_of           # any_of|all_of
+  tags:
+    - SEM_QUANTITY_SMALL
+
+
+intent_links:
+  - intent: quantity_small
+    confidence: medium
+    notes: "Emblematic cue for downscaling quantity or importance."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - PROS_SAD_01
+    - FACE_SMILE_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: "Can substitute minimal 'a little' responses when propositional detail is not required."
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: dominance
+    direction: decrease
+    notes: "Downscaling cues may reduce perceived forcefulness."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: "Semantic triggers (to be added to schema): SMALL, LITTLE, MINIMIZE, LOW_AMOUNT."

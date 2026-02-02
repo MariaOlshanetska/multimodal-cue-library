@@ -1,0 +1,66 @@
+id: GEST_DEICTIC_ME_01
+name: "Deictic ME (self-point)"
+modality: gesture
+cue_type: deictic
+description: >
+  Self-pointing gesture (thumb or index toward the chest) marking first-person reference,
+  self-involvement, or contrast with the interlocutor.
+
+semantic_triggers:
+  scope: utterance        # utterance|rheme|any
+  match: any_of           # any_of|all_of
+  tags:
+    - SEM_DEIXIS_ME
+
+intent_links:
+  - intent: self_reference
+    confidence: high
+    notes: "Marks first-person reference and self-involvement."
+  - intent: contrast_me_you
+    confidence: medium
+    notes: "Can support contrastive framing (me vs you)."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - PROS_HYPERVOCALIZATION_01
+    - FACE_OPEN_EYES_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: "Can substitute isolated 'me' references when no additional propositional content is needed."
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: credibility
+    direction: increase
+    notes: "Explicit self-marking may increase perceived ownership/commitment."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

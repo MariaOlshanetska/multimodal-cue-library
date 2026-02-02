@@ -1,7 +1,44 @@
-- acknowledgment
-- emphasis
-- turn-yielding
-- turn-holding
-- affiliation
-- uncertainty
-- urgency
+# taxonomy/intents.yaml
+# Multimodal Cue Library — Intent taxonomy (v0.1, casual_chat scope)
+# Convention: snake_case, verb_noun where possible.
+
+# --- Interaction management ---
+- backchannel_ack              # minimal receipt/acknowledgment
+- turn_hold                    # keep the floor / "wait"
+- elicit_response              # solicit interlocutor response / allocate next turn
+- address_other                # explicitly address interlocutor
+
+# --- Epistemic / trouble / repair ---
+- uncertainty                  # hesitant / not sure
+- repair_initiation            # indicates misunderstanding / prompts clarification
+- cognitive_load               # online planning difficulty (without necessarily asking for repair)
+- cognitive_load_resolved      # resolution/relief after planning
+
+# --- Discourse structuring ---
+- emphasis                     # highlight rheme/prominence
+- introduce_topic              # introduce referent/topic
+- topic_continuation	       # continuation of topic
+- explain_structure            # package/frame an explanation
+- explain_sequence             # temporal/causal sequencing
+- explain_repetition           # iteration/routine/cycle
+- summarize                    # overall/generalization
+- topic_closure                # closing/rounding off a topic
+
+# --- Stance / social meaning ---
+- affiliation                  # warmth, alignment, positive stance
+- mitigation                   # soften dispreferred/face-threatening content
+- negative_stance              # disappointment/critique without aggression
+- empathy_ack_difficulty       # empathic acknowledgment of difficulty (non-instructional)
+
+# --- Humor / non-literal stance ---
+- humor_amusement_response     # laughter as response to joke
+- sarcasm_stance               # sarcasm/irony framing
+
+# --- Quantification / money emblems (semantic-triggered) ---
+- money_price_query            # money/cost/expensive/how much
+- quantity_small               # a bit/little/minimize
+- quantity_large               # a lot/many/very/intensify
+
+# --- Depiction / iconic reference ---
+- depict_action                # iconic action depiction (drink/eat/run)
+- suggest_activity             # proposal/suggestion of action (optional in casual chat)

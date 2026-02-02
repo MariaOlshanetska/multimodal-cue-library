@@ -1,0 +1,60 @@
+id: GEST_PATH_TRACE_01
+name: "Path trace (trajectory in space)"
+modality: gesture
+cue_type: metaphoric
+description: >
+  The hand traces a line or curve in space to depict a trajectory, progression, or transition
+  from one state to another (temporal or causal sequencing).
+
+intent_links:
+  - intent: explain_sequence
+    confidence: medium
+    notes: "Common for ordering steps or depicting change over time."
+  - intent: emphasis
+    confidence: low
+    notes: "Can also highlight a key transition."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: path
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - PROS_HYPERVOCALIZATION_01
+    - FACE_SMILE_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: false
+    substitution_notes: "Path tracing supports sequencing content but does not substitute the utterance."
+  intensity_level: any
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: credibility
+    direction: increase
+    notes: "May increase perceived coherence in causal/temporal explanations."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

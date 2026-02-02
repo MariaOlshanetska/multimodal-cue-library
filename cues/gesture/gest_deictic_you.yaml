@@ -1,0 +1,66 @@
+id: GEST_DEICTIC_YOU_01
+name: "Deictic YOU (point to interlocutor)"
+modality: gesture
+cue_type: deictic
+description: >
+  Indexical gesture directed toward the interlocutor/camera to mark second-person reference,
+  address, or turn allocation.
+
+semantic_triggers:
+  scope: utterance        # utterance|rheme|any
+  match: any_of           # any_of|all_of
+  tags:
+    - SEM_DEIXIS_YOU
+
+intent_links:
+  - intent: address_other
+    confidence: high
+    notes: "Marks addressee and can allocate the next turn."
+  - intent: elicit_response
+    confidence: medium
+    notes: "Can be used to solicit a response without explicit verbal prompting."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - FACE_SMILE_01
+    - PROS_HYPERVOCALIZATION_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: "Can substitute minimal 'you?' prompts when the intended action is turn allocation/elicitation."
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: dominance
+    direction: increase
+    notes: "Direct address may increase perceived directiveness depending on context."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

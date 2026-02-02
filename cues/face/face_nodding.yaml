@@ -7,7 +7,7 @@ description: >
   it is treated here as a face-channel cue for early library population and can be revised later.
 
 intent_links:
-  - intent: acknowledgment
+  - intent: backchannel_ack
     confidence: high
     notes: "Often used as a minimal feedback/receipt signal in casual interaction."
 

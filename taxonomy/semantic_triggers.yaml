@@ -1,0 +1,133 @@
+# taxonomy/semantic_triggers.yaml
+# Multimodal Cue Library — Semantic triggers (v0.1, casual_chat scope)
+# These tags are intended to annotate the utterance and/or rheme (upstream),
+# enabling deterministic cue selection (especially emblems and deixis).
+
+version: "0.1"
+namespace: "SEM"
+
+tags:
+
+  # --- Money / price ---
+  - id: SEM_MONEY_PRICE
+    description: "Mentions money, price, cost, expensive/cheap, or payment."
+    examples:
+      - "How much is it?"
+      - "That's expensive."
+      - "It costs a lot."
+    suggested_cues:
+      - GEST_EMBLEM_MONEY_01
+
+  # --- Quantity / degree ---
+  - id: SEM_QUANTITY_SMALL
+    description: "Small quantity/degree: a bit, little, tiny, not much."
+    examples:
+      - "Just a little."
+      - "A tiny bit."
+    suggested_cues:
+      - GEST_EMBLEM_SMALL_01
+
+  - id: SEM_QUANTITY_LARGE
+    description: "Large quantity/degree: a lot, many, very, so much."
+    examples:
+      - "A lot."
+      - "Very much."
+    suggested_cues:
+      - GEST_EMBLEM_A_LOT_01
+
+  # --- Politeness / gratitude ---
+  - id: SEM_PLEASE
+    description: "Polite request marker: please / I beg you / could you."
+    examples:
+      - "Please."
+      - "Could you help me?"
+    suggested_cues:
+      - GEST_EMBLEM_PRAYING_01
+
+  - id: SEM_THANKS
+    description: "Gratitude: thanks / thank you."
+    examples:
+      - "Thanks!"
+      - "Thank you so much."
+    suggested_cues:
+      - GEST_EMBLEM_PRAYING_01
+
+  # --- Turn management / pausing ---
+  - id: SEM_WAIT_HOLD_ON
+    description: "Request to pause or hold the floor: wait, hold on, one second."
+    examples:
+      - "Wait."
+      - "Hold on a sec."
+    suggested_cues:
+      - GEST_EMBLEM_WAIT_01
+
+  # --- Deixis / participant reference ---
+  - id: SEM_DEIXIS_YOU
+    description: "Second-person reference or explicit addressee selection."
+    examples:
+      - "You mean…"
+      - "What do you think?"
+    suggested_cues:
+      - GEST_DEICTIC_YOU_01
+
+  - id: SEM_DEIXIS_ME
+    description: "First-person reference (self)."
+    examples:
+      - "Me?"
+      - "For me, it’s…"
+    suggested_cues:
+      - GEST_DEICTIC_ME_01
+
+  # --- Action depiction (iconics) ---
+  - id: SEM_ACTION_DRINK
+    description: "Reference to drinking (literal or activity suggestion)."
+    examples:
+      - "Let’s grab a drink."
+      - "I was drinking…"
+    suggested_cues:
+      - GEST_ICONIC_DRINKING_01
+
+  # --- Humor / non-literal stance (optional triggers) ---
+  - id: SEM_HUMOR_JOKE
+    description: "Utterance framed as joke/humor, or contains humorous intent."
+    examples:
+      - "That’s hilarious."
+      - "Just kidding."
+    suggested_cues:
+      - VB_LAUGH_INTENSE_01
+
+  - id: SEM_SARCASM_IRONY
+    description: "Irony/sarcasm framing or non-literal stance marker."
+    examples:
+      - "Yeah, sure…"
+      - "Great…"
+    suggested_cues:
+      - VB_LAUGH_SLIGHT_01
+
+  # --- Empathic acknowledgment of difficulty ---
+  - id: SEM_ACK_DIFFICULTY
+    description: "Acknowledges hardship/difficulty; empathic stance."
+    examples:
+      - "That must be hard."
+      - "Oof, that’s tough."
+    suggested_cues:
+      - VB_PFFF_01
+
+  # --- Cognitive load / planning (optional triggers) ---
+  - id: SEM_COG_LOAD
+    description: "Planning trouble / searching / thinking (often paired with disfluency)."
+    examples:
+      - "Uh… let me think."
+      - "I’m trying to remember."
+    suggested_cues:
+      - VB_HESITATION_01
+      - FACE_LOOK_UP_01
+      - PROS_COGNITIVE_LOAD_01
+
+  - id: SEM_COG_LOAD_RESOLVED
+    description: "Resolution/relief after planning trouble."
+    examples:
+      - "Ah! Right."
+      - "Oh, I got it."
+    suggested_cues:
+      - VB_AAAH_01

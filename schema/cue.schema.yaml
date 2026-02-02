@@ -79,6 +79,10 @@ field_spec:
     - intent: "string (controlled list recommended)"
       confidence: "low|medium|high"
       notes: "why this mapping is hypothesized / citations"
+  semantic_triggers:
+    scope: "utterance|rheme|any"
+    match: "any_of|all_of"
+    tags: ["SEM_*"]
 
   prerequisites:
     interaction_context:

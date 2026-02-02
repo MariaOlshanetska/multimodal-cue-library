@@ -1,0 +1,63 @@
+id: GEST_CONTAINER_FRAMING_01
+name: "Container framing (hands shape a space)"
+modality: gesture
+cue_type: metaphoric
+description: >
+  Two hands shape or frame an imagined bounded space (box/bowl) in front of the torso,
+  used to construe content as a delimited unit (scope, domain, inside/outside).
+
+intent_links:
+  - intent: explain_structure
+    confidence: medium
+    notes: "Often used to package an idea as a bounded conceptual unit."
+  - intent: emphasis
+    confidence: low
+    notes: "Can increase salience of the framed segment."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: container
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - FACE_SMILE_01
+    - PROS_HYPERVOCALIZATION_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: false
+    substitution_notes: "Metaphoric framing supports content but does not replace the verbal string."
+  intensity_level: any
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: credibility
+    direction: increase
+    notes: "Structuring gestures may increase perceived clarity and coherence."
+  - perception: uncertainty
+    direction: decrease
+    notes: "May reduce ambiguity by visually packaging the intended scope."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

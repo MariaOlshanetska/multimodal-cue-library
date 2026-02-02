@@ -1,0 +1,39 @@
+# taxonomy/modalities.yaml
+# Multimodal Cue Library — Modalities (v0.1)
+# Keep aligned with cue.schema.yaml controlled_vocabularies.modality
+
+modalities:
+  - gesture
+  - face
+  - prosody
+  - vocal_burst
+  - gaze        # reserved for later (if you split gaze from face)
+  - posture     # reserved for later (body posture cues)
+
+# Optional: modality -> cue_type inventory (helps consistency when scaling)
+cue_types:
+  gesture:
+    - iconic
+    - metaphoric
+    - emblematic
+    - deictic
+    - abstract_deictic
+    - beat
+
+  face:
+    - expression
+    - brow_action
+    - smile
+    - eye_action
+
+  prosody:
+    - package
+    - event       # reserved for later, if you add local prosodic events
+
+  vocal_burst:
+    - laugh
+    - sigh
+    - hesitation
+    - snort
+    - exhalation
+    - click

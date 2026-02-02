@@ -1,0 +1,69 @@
+id: GEST_ICONIC_DRINKING_01
+name: "Iconic DRINKING (mime drinking)"
+modality: gesture
+cue_type: iconic
+description: >
+  Mime of holding a cup and bringing it to the mouth, iconically depicting the action of drinking.
+  Used to reference an action/event in a vivid, embodied way.
+
+semantic_triggers:
+  scope: utterance        # utterance|rheme|any
+  match: any_of           # any_of|all_of
+  tags:
+    - SEM_ACTION_DRINK
+    - SEM_THIRST
+    - SEM_DRUNK
+
+
+intent_links:
+  - intent: depict_action
+    confidence: medium
+    notes: "Iconically depicts an action to support reference or narrative vividness."
+  - intent: suggestion_activity
+    confidence: low
+    notes: "Can support proposals like suggesting a drink when paired with speech."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - FACE_SMILE_01
+    - PROS_EXCITED_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: "Can substitute short action references (e.g., 'drink') when context is sufficiently constrained."
+  intensity_level: any
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: credibility
+    direction: increase
+    notes: "Iconic depiction can increase clarity and vividness of reference."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

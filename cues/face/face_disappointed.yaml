@@ -7,7 +7,7 @@ description: >
   tension). Included as a stance marker that can modulate interpretation of negative evaluations.
 
 intent_links:
-  - intent: stance_negative
+  - intent: negative_stance
     confidence: medium
     notes: "Signals negative stance while potentially remaining less confrontational than anger."
 

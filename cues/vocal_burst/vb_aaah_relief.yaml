@@ -7,7 +7,7 @@ description: >
   cognitive load (e.g., after finding the right word/solution) and signal that trouble has been resolved.
 
 intent_links:
-  - intent: cog_load_solved
+  - intent: cognitive_load_resolved
     confidence: medium
     notes: "Signals resolution/relief after planning difficulty; can close a repair-like sequence."
 

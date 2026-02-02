@@ -7,7 +7,7 @@ description: >
   as a response cue for overt humor and positive engagement.
 
 intent_links:
-  - intent: answer_joke
+  - intent: humor_amusement_response
     confidence: high
     notes: "Signals amusement and frames the prior content as humorous."
 

@@ -1,0 +1,64 @@
+id: GEST_EMBLEM_MONEY_01
+name: "Money emblem (thumb rub)"
+modality: gesture
+cue_type: emblematic
+description: >
+  Thumb rubbing against fingers to signal money/price/expense. Used as an emblematic cue
+  linked to cost-related meanings.
+
+semantic_triggers:
+  scope: utterance        # utterance|rheme|any
+  match: any_of           # any_of|all_of
+  tags:
+    - SEM_MONEY_PRICE
+
+intent_links:
+  - intent: money_price_query
+    confidence: high
+    notes: "Emblem for 'money/how much/expensive'."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - FACE_CONFUSED_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: >
+      Can substitute short cost-related questions (e.g., 'how much?') when context makes reference clear.
+  intensity_level: low
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: uncertainty
+    direction: decrease
+    notes: "May reduce ambiguity by directly marking cost semantics."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Form/interpretation can vary across communities."
+
+evidence:
+  citations: []
+
+notes: ""
+

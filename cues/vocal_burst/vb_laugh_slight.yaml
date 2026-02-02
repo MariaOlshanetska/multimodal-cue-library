@@ -8,7 +8,7 @@ description: >
   or non-literal.
 
 intent_links:
-  - intent: answer_sarcasm
+  - intent: sarcasm_stance
     confidence: medium
     notes: "Used as a pragmatic stance cue that can signal irony/sarcasm in casual chat."
 

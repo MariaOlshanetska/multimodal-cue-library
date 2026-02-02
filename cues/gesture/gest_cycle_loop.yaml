@@ -1,0 +1,63 @@
+id: GEST_CYCLE_LOOP_01
+name: "Cycle loop (circular motion)"
+modality: gesture
+cue_type: metaphoric
+description: >
+  A small circular motion with the hand or finger that depicts repetition, routine,
+  or returning to a previous point (cyclic structure).
+
+intent_links:
+  - intent: explain_repetition
+    confidence: medium
+    notes: "Used to convey iteration (again, repeatedly, cycle)."
+  - intent: topic_continuation
+    confidence: low
+    notes: "Can mark continuation or revisiting a point."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: cycle
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - PROS_COGNITIVE_LOAD_01
+    - FACE_LOOK_UP_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: false
+    substitution_notes: "Metaphoric looping does not substitute the verbal string."
+  intensity_level: any
+  amplitude_level: low
+
+predicted_outcomes:
+  - perception: credibility
+    direction: increase
+    notes: "May improve perceived explanatory coherence for repetitive structures."
+  - perception: uncertainty
+    direction: decrease
+    notes: "May help disambiguate temporal/repetitive meaning."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""

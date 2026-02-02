@@ -1,0 +1,61 @@
+id: GEST_WHOLE_ENCOMPASS_01
+name: "Whole encompass (broad sweep)"
+modality: gesture
+cue_type: metaphoric
+description: >
+  A broad sweep (often with one or two hands) that depicts encompassing a whole set, situation,
+  or general domain, used for summarizing or generalizing.
+
+intent_links:
+  - intent: summarize
+    confidence: medium
+    notes: "Used to mark 'overall' or 'in general' construal."
+  - intent: topic_closure
+    confidence: low
+    notes: "Can accompany closing a point."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: whole
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - PROS_HYPERVOCALIZATION_01
+    - FACE_OPEN_EYES_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: false
+    substitution_notes: "Summary sweeps accompany verbal summarization rather than replacing it."
+  intensity_level: any
+  amplitude_level: high
+
+predicted_outcomes:
+  - perception: credibility
+    direction: increase
+    notes: "May increase perceived discourse organization and coherence."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: assumed
+  notes: ""
+
+evidence:
+  citations: []
+
+notes: ""
+

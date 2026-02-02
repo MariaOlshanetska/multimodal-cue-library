@@ -1,0 +1,62 @@
+id: GEST_EMBLEM_WAIT_01
+name: "Wait/hold on emblem (palm out)"
+modality: gesture
+cue_type: emblematic
+description: >
+  Palm-out 'wait/hold on' gesture used for turn-holding, pausing, or gently stopping progression.
+
+semantic_triggers:
+  scope: utterance        # utterance|rheme|any
+  match: any_of           # any_of|all_of
+  tags:
+    - SEM_WAIT_HOLD_ON
+
+intent_links:
+  - intent: turn_hold
+    confidence: medium
+    notes: "Can manage interactional flow by requesting delay or holding the floor."
+
+prerequisites:
+  interaction_context:
+    domain: casual_chat
+    task_involved: false
+    emergency_context: false
+    social_asymmetry: false
+  discourse:
+    position: any
+    adjacency_role: any
+    rheme_required: false
+    image_schema_required: na
+  physical:
+    constraints_status: not_modeled
+  affective:
+    valence_target: any
+    arousal_target: any
+
+compatibility:
+  can_cooccur_with:
+    - VB_HESITATION_01
+    - FACE_CONFUSED_01
+
+parameters:
+  substitution:
+    can_substitute_utterance: true
+    substitution_notes: "Can substitute short 'wait/hold on' tokens when propositional content is not required."
+  intensity_level: low
+  amplitude_level: medium
+
+predicted_outcomes:
+  - perception: politeness
+    direction: increase
+    notes: "When used softly, may be perceived as polite turn management."
+
+culture:
+  baseline: Catalan
+  known_variants: []
+  status: speculative
+  notes: "Directiveness of this emblem may vary cross-culturally."
+
+evidence:
+  citations: []
+
+notes: "Semantic triggers (to be added to schema): WAIT, HOLD_ON, PAUSE."
