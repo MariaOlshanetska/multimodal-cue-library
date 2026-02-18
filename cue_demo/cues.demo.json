@@ -1,0 +1,69 @@
+{
+  "version": "0.1",
+  "cues": [
+    {
+      "id": "vburst_hesitation_um",
+      "modality": "vocal_burst",
+      "intents": ["uncertainty", "repair_initiation", "mitigation"],
+      "constraints": { "languages": ["en", "ANY"], "cultures": ["ANY"], "formality": ["informal", "neutral"], "roles": ["ANY"] },
+      "salience": 0.8,
+      "universality": 0.6
+    },
+    {
+      "id": "vburst_soft_laugh",
+      "modality": "vocal_burst",
+      "intents": ["affiliation", "mitigation"],
+      "constraints": { "languages": ["ANY"], "cultures": ["ANY"], "formality": ["informal", "neutral"], "roles": ["ANY"] },
+      "salience": 0.8,
+      "universality": 0.7
+    },
+    {
+      "id": "face_brow_raise",
+      "modality": "facial_expression",
+      "intents": ["emphasis", "introduce_topic"],
+      "constraints": { "languages": ["ANY"], "cultures": ["ANY"], "formality": ["ANY"], "roles": ["ANY"] },
+      "salience": 0.6,
+      "universality": 0.7
+    },
+    {
+      "id": "face_smile_small",
+      "modality": "facial_expression",
+      "intents": ["affiliation", "mitigation", "backchannel_ack"],
+      "constraints": { "languages": ["ANY"], "cultures": ["ANY"], "formality": ["informal", "neutral"], "roles": ["ANY"] },
+      "salience": 0.5,
+      "universality": 0.7
+    },
+    {
+      "id": "body_palm_up_open",
+      "modality": "body_gesture",
+      "intents": ["explain_structure", "mitigation", "summarize"],
+      "constraints": { "languages": ["ANY"], "cultures": ["ANY"], "formality": ["informal", "neutral"], "roles": ["symmetric", "ANY"] },
+      "salience": 0.7,
+      "universality": 0.8
+    },
+    {
+      "id": "body_head_nod_small",
+      "modality": "body_gesture",
+      "intents": ["backchannel_ack", "affiliation", "topic_continuation"],
+      "constraints": { "languages": ["ANY"], "cultures": ["ANY"], "formality": ["ANY"], "roles": ["ANY"] },
+      "salience": 0.6,
+      "universality": 0.8
+    },
+    {
+      "id": "prosody_slight_slowdown",
+      "modality": "prosody",
+      "intents": ["explain_structure", "emphasis", "summarize"],
+      "constraints": { "languages": ["ANY"], "cultures": ["ANY"], "formality": ["neutral", "formal", "ANY"], "roles": ["ANY"] },
+      "salience": 0.5,
+      "universality": 0.9
+    },
+    {
+      "id": "prosody_rising_question",
+      "modality": "prosody",
+      "intents": ["elicit_response"],
+      "constraints": { "languages": ["ANY"], "cultures": ["ANY"], "formality": ["ANY"], "roles": ["ANY"] },
+      "salience": 0.7,
+      "universality": 0.7
+    }
+  ]
+}
